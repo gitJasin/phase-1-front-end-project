@@ -1,7 +1,7 @@
-# phase-1-front-end-projecthttps://www.figma.com/file/skc1QMESuVDJRZ273Llh4Z/Front-End-Phase-1-Project?type=whiteboard&t=7XtjVJ1MsuH2eDSA-1https://www.figma.com/file/skc1QMESuVDJRZ273Llh4Z/Front-End-Phase-1-Project?type=whiteboard&t=7XtjVJ1MsuH2eDSA-1https://www.figma.com/file/skc1QMESuVDJRZ273Llh4Z/Front-End-Phase-1-Project?type=whiteboard&t=7XtjVJ1MsuH2eDSA-1
+# phase-1-front-end-project
 To make this work you will need to run json-server and watch the db.json file 
 
-##### This is my phase-1 project for software development bootcamp at Flatiron School 2023. It is creating a Karaoke Helper. Below is a description of:
+##### This is my phase-1 project for software development bootcamp at Flatiron School 2023. It is creating a Space image rater with a focus on front-end design. Below is a description of:
 - Context of the Work - general vision
 - Minimum Viable Product (MVP) Requirements, 
 - User Stories 
