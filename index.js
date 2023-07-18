@@ -1,16 +1,40 @@
 // Render to DOM Functions
 //====================================================
 
-function createDailyImageCard (imageURL, title, date) {
+function createSpaceImageCard (imageUrl, title, date) {
+    // let card = document.createElement('div')
+    // card.classList.add('space-image-card')
 
+    // let image = document.createElement('img')
+    // image.classList.add('space-image')
+    // image.src = imageURL
+
+    console.log('imageURL = ',imageUrl)
+    console.log('Title: ', title)
+    console.log('Date: ', date)
 }
 
 // Fetch Requests
 //====================================================
 
-function getSpaceImage (randoDate) {
-    const apiUrl = 
+function getSpaceImage (dateForApi) {
+    const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=${dateForApi}&end_date=${dateForApi}`
+
+    fetch(apiUrl)
+        .then(r => r.json())
+        .then(data => {
+            const imageUrl = data[0].url 
+            const title = data[0].title
+            const date = data[0].date
+
+            createSpaceImageCard(imageUrl, title, date)
+        })
+        .catch(error => {
+            console.error('Error fetching data', error)
+        })
 }
+
+getSpaceImage(randomDateBetween)
 
 // Random Date Generator. For making random dates used in the api url to render random space image to the DOM. DISCLAIMER >>> I worked with chat GPT to help get this to work as I got stuck many times.
 //====================================================
