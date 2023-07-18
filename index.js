@@ -2,16 +2,31 @@
 //====================================================
 
 function createSpaceImageCard (imageUrl, title, date) {
-    // let card = document.createElement('div')
-    // card.classList.add('space-image-card')
+    let card = document.createElement('div')
+    card.classList.add('space-image-card')
 
-    // let image = document.createElement('img')
-    // image.classList.add('space-image')
-    // image.src = imageURL
+    let image = document.createElement('img')
+    image.classList.add('space-image')
+    image.src = imageUrl
 
-    console.log('imageURL = ',imageUrl)
-    console.log('Title: ', title)
-    console.log('Date: ', date)
+    let imageTitle = document.createElement('p')
+    imageTitle.classList.add('space-image-title')
+    imageTitle.textContent = `Title: ${title}`
+
+    let imageDate = document.createElement('p')
+    imageDate.classList.add('space-image-date')
+    imageDate.textContent = `Date: ${date}`
+
+    let url = document.createElement('p')
+    url.classList.add('space-image-url')
+    url.textContent = `URL: ${imageUrl}`
+
+    card.append(image, imageTitle, imageDate, url)
+    document.querySelector('.space-image-card').append(card)
+
+    // console.log('imageURL = ',imageUrl)
+    // console.log('Title: ', title)
+    // console.log('Date: ', date)
 }
 
 // Fetch Requests
