@@ -21,10 +21,34 @@
         </ul>
     </nav>
     <main>
-        <section class="welcome-card">
-            <p>
+        <section>
+            <div class="welcome-card">
+                <p>
                 Welcome to My Cosmic Pics. Here, you can find , like, and save your favorite cosmic images! Click the random button to load a random space image. Add it or other images to your favorites with the form below. Enjoy!
-            </p>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="daily-image-card">
+
+            </div>
+        </section>
+        <section>
+            <h2 id="favorites-title">My Favorites</h2>
+            <div class="favorite-image-scroller">
+
+            </div>
+        </section>
+        <section>
+            <h2 id="form-title">Add to Favorites</h2>
+            <form id="add-favorites-form">
+                <input type="text" name="title" id="form-title" placeholder="Title"/>
+                <input type="text" name="date" id="form-date" placeholder="Date"/>
+                <input type="text" name="url" id="form-url" placeholder="URL"/>
+                <input type="number" name="raiting" id="form-raiting" />
+                <input type="textarea" name="notes" id="form-notes" placeholder="Notes"/>
+                <input type="submit" value="Submit" />
+            </form>
         </section>
     </main>
     <footer>
