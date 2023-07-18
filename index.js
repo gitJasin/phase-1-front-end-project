@@ -29,23 +29,23 @@ function createSpaceImageCard (imageUrl, title, date) {
     // console.log('Date: ', date)
 }
 
-// function createFavoriteImageCard(faveImages) {
+function createFavoriteImageCard(faveImages) {
 
-// }
+}
 
-// // Event Listeners
-// //====================================================
+// Event Listeners
+//====================================================
 
-// document.querySelector('#add-favorites-form').addEventListener('submit', handleSubmit)
+document.querySelector('#add-favorites-form').addEventListener('submit', handleSubmit)
 
-// // Event Handlers
-// //====================================================
+// Event Handlers
+//====================================================
 
-// function handleSubmit(e) {
-//     e.preventDefault()
+function handleSubmit(e) {
+    e.preventDefault()
 
-//     let formData = Object.fromEntries(new FormData(e.target))
-// }
+    let formData = Object.fromEntries(new FormData(e.target))
+}
 
 // Fetch Requests
 //====================================================
