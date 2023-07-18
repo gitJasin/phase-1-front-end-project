@@ -8,8 +8,8 @@ function createDailyImageCard (imageURL, title, date) {
 // Fetch Requests
 //====================================================
 
-function getSpaceImage () {
-        
+function getSpaceImage (randoDate) {
+    const apiUrl = 
 }
 
 // Random Date Generator. For making random dates used in the api url to render random space image to the DOM. DISCLAIMER >>> I worked with chat GPT to help get this to work as I got stuck many times.
@@ -42,5 +42,5 @@ const startDate = "1995-06-16"
 const currentDate = new Date()
 const endDate = currentDate.toISOString().split('T')[0]
 
-// Generate random date
+// Make variable for ease of use and assign it random date
 const randomDateBetween = randomDate(startDate, endDate)
