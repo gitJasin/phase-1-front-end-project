@@ -49,7 +49,7 @@ function getSpaceImage (dateForApi) {
         })
 }
 
-// Random Date Generator. For making random dates used in the api url to render random space image to the DOM. DISCLAIMER >>> I worked with chat GPT to help get this to work as I got stuck many times.
+// Random Date Generator. For making random dates used in the api url to render random space image to the DOM. DISCLAIMER >>> I worked with chat GPT and read documentation to help get this to work as I got stuck many times.
 //====================================================
 
 const randomDate = function generateRandomDate(startDate, endDate) {
@@ -65,6 +65,7 @@ const randomDate = function generateRandomDate(startDate, endDate) {
 
     // Format the date as "yyyy-mm-dd"
     const year = randomDate.getFullYear()
+    // the String() function is used to convert the month to a string as the method padStart can only use strings. The argument 2 is used to always make it two digits and 0 is what is put in front if it is only 1 digit. So 7 is turned to 07. 1 is added here as getMonth() function only returns 0-11, Jan = 0
     const month = String(randomDate.getMonth() + 1).padStart(2, '0')
     const day = String(randomDate.getDate()).padStart(2, '0')
 
@@ -82,4 +83,6 @@ const endDate = currentDate.toISOString().split('T')[0]
 // Make variable for ease of use and assign it random date
 const randomDateBetween = randomDate(startDate, endDate)
 
+// Intial Render
+//====================================================
 getSpaceImage(randomDateBetween)
