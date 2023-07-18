@@ -34,8 +34,6 @@ function getSpaceImage (dateForApi) {
         })
 }
 
-getSpaceImage(randomDateBetween)
-
 // Random Date Generator. For making random dates used in the api url to render random space image to the DOM. DISCLAIMER >>> I worked with chat GPT to help get this to work as I got stuck many times.
 //====================================================
 
@@ -68,3 +66,5 @@ const endDate = currentDate.toISOString().split('T')[0]
 
 // Make variable for ease of use and assign it random date
 const randomDateBetween = randomDate(startDate, endDate)
+
+getSpaceImage(randomDateBetween)
