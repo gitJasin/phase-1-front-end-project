@@ -29,10 +29,28 @@ function createSpaceImageCard (imageUrl, title, date) {
     // console.log('Date: ', date)
 }
 
+// function createFavoriteImageCard(faveImages) {
+
+// }
+
+// // Event Listeners
+// //====================================================
+
+// document.querySelector('#add-favorites-form').addEventListener('submit', handleSubmit)
+
+// // Event Handlers
+// //====================================================
+
+// function handleSubmit(e) {
+//     e.preventDefault()
+
+//     let formData = Object.fromEntries(new FormData(e.target))
+// }
+
 // Fetch Requests
 //====================================================
 
-function getSpaceImage (dateForApi) {
+function getSpaceImage(dateForApi) {
     const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=${dateForApi}&end_date=${dateForApi}`
 
     fetch(apiUrl)
@@ -73,7 +91,6 @@ const randomDate = function generateRandomDate(startDate, endDate) {
 }
 
 // Set start date to "1995-06-16" The first day the api started posting images
-
 const startDate = "1995-06-16"
 
 // Get today's date and set it as the end date
@@ -85,4 +102,5 @@ const randomDateBetween = randomDate(startDate, endDate)
 
 // Intial Render
 //====================================================
+
 getSpaceImage(randomDateBetween)
