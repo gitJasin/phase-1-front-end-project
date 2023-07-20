@@ -64,6 +64,7 @@ function createFavoriteImageCard(faveImages) {
     deleteBtn.addEventListener('click', (e) => {
         if(confirm('Are you sure you want to remove this image from favorites? This action cannot be undone.'))
             console.log('Delete button works!')
+            e.target.parentNode.remove()
             // deleteFromFavorites()
     })
 
