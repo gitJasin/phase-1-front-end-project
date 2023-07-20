@@ -57,7 +57,17 @@ function createFavoriteImageCard(faveImages) {
     faveImageUrl.classList.add('fave-image-url')
     faveImageUrl.textContent = `URL: ${faveImages.url}`
 
-    faveCard.append(faveImage, faveImageTitle, faveImageDate, faveImageRaiting, faveImageNotes, faveImageUrl)
+    let deleteBtn = document.createElement('button')
+    deleteBtn.classList.add('delete-btn')
+    deleteBtn.classList.add('button')
+    deleteBtn.textContent = 'Delete 🗑️'
+    deleteBtn.addEventListener('click', (e) => {
+        if(confirm('Are you sure you want to remove this image from favorites? This action cannot be undone.'))
+            console.log('Delete button works!')
+            // deleteFromFavorites()
+    })
+
+    faveCard.append(faveImage, faveImageTitle, faveImageDate, faveImageRaiting, faveImageNotes, faveImageUrl, deleteBtn)
 
     document.querySelector('.favorite-image-scroller').append(faveCard)
 }
