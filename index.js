@@ -45,13 +45,17 @@ function handleSubmit(e) {
     e.preventDefault()
 
     let formData = Object.fromEntries(new FormData(e.target))
+
+    addNewFaveImage(formData)
+    // createFavoriteImageCard(formData)
+    e.target.reset()
 }
 
 // Fetch Requests
 //====================================================
 
 function getSpaceImage(dateForApi) {
-    const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=${dateForApi}&end_date=${dateForApi}`
+    const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=hDiFlZmxk03YhcXKdYMiAveaGhrwDgxFOjYAltax&start_date=${dateForApi}&end_date=${dateForApi}`
 
     fetch(apiUrl)
         .then(r => r.json())
@@ -64,6 +68,20 @@ function getSpaceImage(dateForApi) {
         })
         .catch(error => {
             console.error('Error fetching data', error)
+        })
+}
+
+function addNewFaveImage(formData) {
+    fetch("http://localhost:3000/faveImages", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData)
+    })
+        .then(r => r.json())
+        .then(newFaveImage => {
+            formData.id = newFaveImage.id
         })
 }
 
