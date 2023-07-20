@@ -32,13 +32,6 @@ function createSpaceImageCard (imageUrl, title, date) {
 
     card.append(image, imageTitle, imageDate, url, randomImageBtn)
     document.querySelector('.space-image-section').append(card)
-
-    
-    // let spaceImageDiv = document.querySelector('.space-image-div')
-    // spaceImageDiv.append(card)
-    // console.log('imageURL = ',imageUrl)
-    // console.log('Title: ', title)
-    // console.log('Date: ', date)
 }
 
 function createFavoriteImageCard(faveImages) {
@@ -75,7 +68,6 @@ function createFavoriteImageCard(faveImages) {
     deleteBtn.textContent = 'Delete 🗑️'
     deleteBtn.addEventListener('click', (e) => {
         if(confirm('Are you sure you want to remove this image from favorites? This action cannot be undone.'))
-            console.log('Delete button works!')
             e.target.parentNode.parentNode.remove()
             // deleteFromFavorites()
     })
