@@ -30,7 +30,36 @@ function createSpaceImageCard (imageUrl, title, date) {
 }
 
 function createFavoriteImageCard(faveImages) {
+    let faveCard = document.createElement('div')
+    faveCard.classList.add('fave-image-card')
 
+    let faveImage = document.createElement('img')
+    faveImage.classList.add('fave-image')
+    faveImage.src = faveImages.url
+
+    let faveImageTitle = document.createElement('p')
+    faveImageTitle.classList.add('fave-image-title')
+    faveImageTitle.textContent = `Title: ${faveImages.title}`
+
+    let faveImageDate = document.createElement('p')
+    faveImageDate.classList.add('fave-image-datge')
+    faveImageDate.textContent = `Date: ${faveImages.date}`
+
+    let faveImageRaiting = document.createElement('p')
+    faveImageRaiting.classList.add('fave-image-raiting')
+    faveImageRaiting.textContent = `Raiting: ${faveImages.raiting}/10`
+
+    let faveImageNotes = document.createElement('p')
+    faveImageNotes.classList.add('p')
+    faveImageNotes.textContent = `Notes: ${faveImages.notes}`
+
+    let faveImageUrl = document.createElement('p')
+    faveImageUrl.classList.add('fave-image-url')
+    faveImageUrl.textContent = `URL: ${faveImages.url}`
+
+    faveCard.append(faveImage, faveImageTitle, faveImageDate, faveImageRaiting, faveImageNotes, faveImageUrl)
+
+    document.querySelector('.favorite-image-scroller').append(faveCard)
 }
 
 // Event Listeners
@@ -47,12 +76,20 @@ function handleSubmit(e) {
     let formData = Object.fromEntries(new FormData(e.target))
 
     addNewFaveImage(formData)
-    // createFavoriteImageCard(formData)
+    createFavoriteImageCard(formData)
     e.target.reset()
 }
 
-// Fetch Requests
+// Fetches
 //====================================================
+
+function getAllFaveImages() {
+    fetch('http://localhost:3000/faveImages')
+    .then(r => r.json())
+    .then(faveImages => {
+        faveImages.forEach(faveImage => createFavoriteImageCard(faveImage))
+    })
+}
 
 function getSpaceImage(dateForApi) {
     const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=hDiFlZmxk03YhcXKdYMiAveaGhrwDgxFOjYAltax&start_date=${dateForApi}&end_date=${dateForApi}`
@@ -122,3 +159,4 @@ const randomDateBetween = randomDate(startDate, endDate)
 //====================================================
 
 getSpaceImage(randomDateBetween)
+getAllFaveImages()
