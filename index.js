@@ -21,9 +21,21 @@ function createSpaceImageCard (imageUrl, title, date) {
     url.classList.add('space-image-url')
     url.textContent = `URL: ${imageUrl}`
 
-    card.append(image, imageTitle, imageDate, url)
+    let randomImageBtn = document.createElement('button')
+    randomImageBtn.classList.add('random-image-button')
+    randomImageBtn.classList.add('button')
+    randomImageBtn.textContent = 'Random Image'
+    randomImageBtn.addEventListener('click', (e) => {
+        e.target.parentNode.remove()
+        getRandomImage()
+    })
+
+    card.append(image, imageTitle, imageDate, url, randomImageBtn)
     document.querySelector('.space-image-card').append(card)
 
+    
+    let spaceImageDiv = document.querySelector('.space-image-div')
+    spaceImageDiv.append(card)
     // console.log('imageURL = ',imageUrl)
     // console.log('Title: ', title)
     // console.log('Date: ', date)
@@ -42,7 +54,7 @@ function createFavoriteImageCard(faveImages) {
     faveImageTitle.textContent = `Title: ${faveImages.title}`
 
     let faveImageDate = document.createElement('p')
-    faveImageDate.classList.add('fave-image-datge')
+    faveImageDate.classList.add('fave-image-date')
     faveImageDate.textContent = `Date: ${faveImages.date}`
 
     let faveImageRaiting = document.createElement('p')
@@ -71,6 +83,11 @@ function createFavoriteImageCard(faveImages) {
     faveCard.append(faveImage, faveImageTitle, faveImageDate, faveImageRaiting, faveImageNotes, faveImageUrl, deleteBtn)
 
     document.querySelector('.favorite-image-scroller').append(faveCard)
+}
+
+function getRandomImage() {
+    const dateBetween = randomDate(startDate, endDate)
+    getSpaceImage(dateBetween)
 }
 
 // Event Listeners
@@ -166,7 +183,7 @@ const endDate = currentDate.toISOString().split('T')[0]
 // Make variable for ease of use and assign it random date
 const randomDateBetween = randomDate(startDate, endDate)
 
-// Intial Render
+// Initial Render
 //====================================================
 
 getSpaceImage(randomDateBetween)
