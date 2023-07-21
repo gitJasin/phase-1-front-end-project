@@ -1,2 +1,71 @@
 /* This is main CSS for site. Using Normalize.css to normalize betweem browsers and deafault it out */
 
+/* Header */
+header {
+    position: relative;
+    text-align: center;
+    background-color:#FF4D00;
+}
+
+header img {
+    height: 300px;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#site-title {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Alien Space', 'Orbitron';
+    font-weight: 400;
+    font-size: 5vw;
+    color: #FF4D00;
+    text-shadow: 4px 4px 4x rgba(32, 27, 242, 0.35);
+    z-index: 1;
+}
+
+.header-image-source {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* Nave Bar */
+nav {
+    margin: 0 auto;
+    background-color: #FF4D00;
+}
+
+nav::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.login {
+    margin-left: 16px;
+    float: left;
+}
+
+.navbar ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+   margin-left: 80px;
+}
+
+.navbar li a {
+    color: blue;
+}
