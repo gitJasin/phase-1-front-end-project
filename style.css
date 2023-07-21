@@ -25,7 +25,7 @@ header img {
     font-weight: 400;
     font-size: 5vw;
     color: #FF4D00;
-    text-shadow: 4px 4px 4x rgba(32, 27, 242, 0.35);
+    text-shadow: 6px 6px 6px rgba(32, 27, 242, 0.35);
     z-index: 1;
 }
 
@@ -37,35 +37,105 @@ header img {
     font-size: 12px;
 }
 
-/* Nave Bar */
+/* Navbar */
 nav {
-    margin: 0 auto;
-    background-color: #FF4D00;
-}
+    box-sizing: border-box;
 
-nav::after {
-    content: '';
-    display: table;
-    clear: both;
+    position: absolute;
+    height: 50px;
+    left: 0px;
+    right: 0px;
+    top: 303px;
+
+    background: rgba(255, 77, 0, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .login {
-    margin-left: 16px;
-    float: left;
+    position: absolute;
+    width: 105px;
+    height: 50px;
+    right: 0px;
+    top: 0px;
+    background: #545458;
+    cursor: pointer;
+}
+
+.login:hover {
+    background: #38FD06;
+}
+
+.login p {
+    position: absolute;
+    left: 16%;
+    right: 16%;
+    top: 5%;
+    bottom: 16%;
+
+    font-family: 'Alien Space';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #38FD06;
+    text-shadow: 6px 6px 6px rgba(32, 27, 242, 0.35);
+    cursor: pointer;
+}
+
+.login p:hover {
+    color: #545458;
 }
 
 .navbar ul {
-    float: right;
-    margin: 0;
+    float: left;
     padding: 0;
     list-style: none;
 }
 
 .navbar li {
     display: inline-block;
-   margin-left: 80px;
+    margin-left: 70px;
+    position: relative;
 }
 
-.navbar li a {
-    color: blue;
+.navbar a {
+    font-family: 'Alien Space';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(32, 27, 242);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.25vh;
+    text-shadow: 6px 6px 6px rgba(32, 27, 242, 0.35);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #38FD06;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: rgb(32, 27, 242);
+
+    position: absolute;
+    top: -20px;
+    width: 0%;
+
+    transition: all 250ms ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%
 }
