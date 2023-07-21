@@ -60,6 +60,7 @@ nav {
     top: 0px;
     background: #545458;
     cursor: pointer;
+    transition: all 200ms ease-in-out;
 }
 
 .login:hover {
@@ -77,12 +78,15 @@ nav {
     font-weight: 400;
     font-size: 22px;
     line-height: 21px;
+
     display: flex;
     align-items: center;
     text-align: center;
+
     color: #38FD06;
     text-shadow: 6px 6px 6px rgba(32, 27, 242, 0.35);
     cursor: pointer;
+    transition: all 200ms ease-in-out;
 }
 
 .login p:hover {
@@ -106,13 +110,15 @@ nav {
     font-weight: 400;
     font-size: 22px;
     line-height: 16px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     color: rgb(32, 27, 242);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.25vh;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
     text-shadow: 6px 6px 6px rgba(32, 27, 242, 0.35);
     cursor: pointer;
     transition: all 200ms ease-in-out;
