@@ -335,11 +335,141 @@ nav a:hover::after {
     gap: 15px;
     padding: 30px 20px;
     grid-auto-flow: column;
-    grid-auto-columns: 34%;\
+    grid-auto-columns: 34%;
     scroll-snap-type: mandatory;
     scroll-padding: 30px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
 
     background: #28282C;
+}
+
+/* Form */
+
+#title-for-form {
+    position: absolute;
+    width: 645px;
+    height: 59px;
+    left: 180px;
+    top: 2900px;
+
+    font-family: 'Alien Space';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 62px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+
+    color: #38FD06;
+
+    text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+#add-favorites-form {
+    position: absolute;
+    width: 640px;
+    height: 603px;
+    left: 180px;
+    top: 3025px;
+
+    background: #28282C;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+#form-title {
+    position: absolute;
+    width: 422px;
+    height: 43px;
+    left: 109px;
+    top: 37px;
+
+    box-shadow: inset 6px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+#form-date {
+    position: absolute;
+    width: 422px;
+    height: 43px;
+    left: 109px;
+    top: 116px;
+
+    box-shadow: inset 6px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+#form-url {
+    position: absolute;
+    width: 422px;
+    height: 43px;
+    left: 109px;
+    top: 195px;
+
+    box-shadow: inset 6px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+#form-rating {
+    position: absolute;
+    width: 422px;
+    height: 43px;
+    left: 109px;
+    top: 274px;
+
+    box-shadow: inset 6px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+#form-notes {
+    position: absolute;
+    width: 422px;
+    height: 136px;
+    left: 109px;
+    top: 355px;
+
+    box-shadow: inset 6px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+#form-title::placeholder,
+#form-date::placeholder,
+#form-url::placeholder,
+#form-rating::placeholder,
+#form-notes::placeholder {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    
+}
+
+#form-submit-btn {
+    position: absolute;
+    width: 192px;
+    height: 67px;
+    left: calc(50% - 192px/2 + 115px);
+    top: 515px;
+
+    background: #545458;
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+    font-family: 'Orbitron';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    align-items: center;
+
+    color: #38FD06;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    top: 3776px;
+
+    background: #545458;
 }
