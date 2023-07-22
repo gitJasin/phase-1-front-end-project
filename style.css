@@ -260,7 +260,7 @@ nav a:hover::after {
     top: 993px;
 
     background: #545458;
-    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 
     font-family: 'Orbitron';
@@ -336,7 +336,7 @@ nav a:hover::after {
     left: calc(50% - 192px/2 + 115px);
 
     background:#28282C;
-    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 
     font-family: 'Orbitron';
@@ -474,7 +474,7 @@ nav a:hover::after {
     top: 515px;
 
     background: #545458;
-    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
 
     font-family: 'Orbitron';
