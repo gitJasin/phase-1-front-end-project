@@ -51,11 +51,11 @@ function createFavoriteImageCard(faveImages) {
     faveImageDate.textContent = `Date: ${faveImages.date}`
 
     let faveImageRaiting = document.createElement('p')
-    faveImageRaiting.classList.add('fave-image-raiting')
+    faveImageRaiting.classList.add('fave-image-rating')
     faveImageRaiting.textContent = `Raiting: ${faveImages.raiting}/10`
 
     let faveImageNotes = document.createElement('p')
-    faveImageNotes.classList.add('p')
+    faveImageNotes.classList.add('fave-image-notes')
     faveImageNotes.textContent = `Notes: ${faveImages.notes}`
 
     let faveImageUrl = document.createElement('p')
@@ -67,7 +67,7 @@ function createFavoriteImageCard(faveImages) {
     deleteBtn.classList.add('button')
     deleteBtn.textContent = 'Delete 🗑️'
     deleteBtn.addEventListener('click', (e) => {
-        if(confirm('Are you sure you want to remove this image from favorites? This action cannot be undone.'))
+        if(confirm('Are you sure you want to remove this image from favorites? This action cannot be undone.'))  
             e.target.parentNode.parentNode.remove()
             // deleteFromFavorites()
     })
