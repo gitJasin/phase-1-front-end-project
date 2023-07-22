@@ -23,6 +23,14 @@
       "raiting": "9",
       "notes": "Infrared planets are AMAZING!",
       "id": 3
+    },
+    {
+      "title": "M45: The Pleiades Star Cluster",
+      "date": "2006-01-09",
+      "url": "https://apod.nasa.gov/apod/image/0601/pleiades_gendler.jpg",
+      "raiting": "9",
+      "notes": "Best image of Pleiades i have seen!",
+      "id": 4
     }
   ]
 }

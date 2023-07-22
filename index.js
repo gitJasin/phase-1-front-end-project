@@ -68,7 +68,7 @@ function createFavoriteImageCard(faveImages) {
     deleteBtn.textContent = 'Delete 🗑️'
     deleteBtn.addEventListener('click', (e) => {
         if(confirm('Are you sure you want to remove this image from favorites? This action cannot be undone.'))  
-            e.target.parentNode.parentNode.remove()
+            e.target.parentNode.remove()
             // deleteFromFavorites()
     })
 
