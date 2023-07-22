@@ -69,7 +69,7 @@ function createFavoriteImageCard(faveImages) {
     deleteBtn.addEventListener('click', (e) => {
         if(confirm('Are you sure you want to remove this image from favorites? This action cannot be undone.'))  
             e.target.parentNode.remove()
-            // deleteFromFavorites()
+            deleteFromFavorites(faveImages.id)
     })
 
     faveCard.append(faveImage, faveImageTitle, faveImageDate, faveImageRaiting, faveImageNotes, faveImageUrl, deleteBtn)
@@ -140,6 +140,15 @@ function addNewFaveImage(formData) {
         .then(newFaveImage => {
             formData.id = newFaveImage.id
         })
+}
+
+function deleteFromFavorites(id) {
+    fetch(`http://localhost:3000/faveImages/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
 }
 
 // Random Date Generator. For making random dates used in the api url to render random space image to the DOM. DISCLAIMER >>> I worked with chat GPT and read documentation to help get this to work as I got stuck many times.

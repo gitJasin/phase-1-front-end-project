@@ -1,4 +1,9 @@
 /* This is main CSS for site. Using Normalize.css to normalize betweem browsers and deafault it out */
+/* Body */
+body {
+    background-color: #0C0A5B;
+}
+
 /* Header */
 header {
     position: relative;
