@@ -1,7 +1,9 @@
 /* This is main CSS for site. Using Normalize.css to normalize betweem browsers and deafault it out */
+/* Body */
 body {
     background: linear-gradient(45deg, rgb(152, 145, 193), #0C0A5B) ;
 }
+
 /* Header */
 header {
     position: relative;
@@ -146,4 +148,33 @@ nav a::after {
 
 nav a:hover::after {
     width: 100%
+}
+
+/* Welcome Card */
+.welcome-card {
+    position: absolute;
+    height: 200px;
+    left: 0;
+    right: 0;
+    top: 392px;
+
+    background: #28282C;
+}
+
+.welcome-card p {
+    position: absolute;
+    height: 127px;
+    left: 190px;
+    right: 190px;
+    top: 23px;
+
+    font-family: 'Orbitron';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #38FD06;
 }
