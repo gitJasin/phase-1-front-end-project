@@ -8,7 +8,7 @@ body {
 header {
     position: relative;
     text-align: center;
-    background-color:#FF4D00;
+    background-color:#0C0A5B;
 }
 
 header img {
@@ -18,6 +18,7 @@ header img {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    opacity: 50%;
 }
 
 #site-title {
@@ -78,7 +79,7 @@ nav {
     top: 5%;
     bottom: 16%;
 
-    font-family: 'Alien Space';
+    font-family: 'Alien Space', 'Orbitron';
     font-weight: 400;
     font-size: 22px;
     line-height: 21px;
@@ -110,7 +111,7 @@ nav {
 }
 
 .navbar a {
-    font-family: 'Alien Space';
+    font-family: 'Alien Space', 'Orbitron';
     font-weight: 400;
     font-size: 22px;
     line-height: 16px;
@@ -271,6 +272,14 @@ nav a:hover::after {
     align-items: center;
 
     color: #38FD06;
+
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.random-image-button:hover {
+    color: #545458;
+    background: #38FD06;
 }
 
 /* My Favorites Section */ 
@@ -282,7 +291,7 @@ nav a:hover::after {
     left: 180px;
     top: 1900px;
 
-    font-family: 'Alien Space';
+    font-family: 'Alien Space', 'Orbitron';
     font-weight: 400;
     font-size: 62px;
     line-height: 60px;
@@ -347,6 +356,14 @@ nav a:hover::after {
     align-items: center;
 
     color: #38FD06;
+
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.delete-btn:hover {
+    color: #28282C;
+    background: #38FD06;
 }
 
 .favorite-image-scroller {
@@ -377,7 +394,7 @@ nav a:hover::after {
     left: 180px;
     top: 2900px;
 
-    font-family: 'Alien Space';
+    font-family: 'Alien Space', 'Orbitron';
     font-style: normal;
     font-weight: 400;
     font-size: 62px;
@@ -485,6 +502,14 @@ nav a:hover::after {
     align-items: center;
 
     color: #38FD06;
+
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+#form-submit-btn:hover {
+    color: #545458;
+    background: #38FD06;
 }
 
 /* Footer */
@@ -494,6 +519,12 @@ footer {
     left: 0px;
     right: 0px;
     top: 3776px;
+    
+    text-align: center;
+    align-items: center;
 
     background: #545458;
+    color: #38FD06;
+    font-family: 'Alien Space', 'Orbitron';
+    font-size: 20px;
 }
