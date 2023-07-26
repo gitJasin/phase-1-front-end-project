@@ -38,6 +38,9 @@ https://www.figma.com/file/skc1QMESuVDJRZ273Llh4Z/Front-End-Phase-1-Project?type
 - User will be able to scroll through their favorite images and see notes etc via list of cards
 - User will be able to interact with nav bar, but they will be dead links as this site is only one page, same with footer social media links and log-in section. 
 
+## Site Walk Through Video
+- Youtube Link: https://www.youtube.com/watch?v=cdW1snlJq20
+
 ## Resources 
 - NASA API Link: https://github.com/nasa/apod-api
 - Fetch Example Link: https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2017-07-08&end_date=2017-07-08
